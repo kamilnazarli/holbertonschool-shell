@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#To print 10 times with the help of until
+i=1
+until [ $i -le 10 ]
+do
+   echo "Best School"
+   ((i++))
+done
