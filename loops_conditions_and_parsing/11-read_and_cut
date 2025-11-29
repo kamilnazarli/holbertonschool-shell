@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #displays username, id, and home directory for each line of /etc/passwd
-while read line
+while read -r line
 do
     user=$(echo "$line" | cut -d':' -f1)
     uid=$(echo "$line" | cut -d':' -f3)
