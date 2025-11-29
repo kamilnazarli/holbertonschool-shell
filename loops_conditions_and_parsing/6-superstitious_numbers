@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+#To display lines with exceptional cases
+i=1
+while [ "$i" -eq 20 ]
+do
+    case $i in
+        1) echo 1 ;;
+        2) echo 2 ;;
+        3) echo 3 ;;
+        4) echo 4 
+           echo "bad luck from China";;
+        5) echo 5 ;;
+        6) echo 6 ;;
+        7) echo 7 ;;
+        8) echo 8 ;;
+        9) echo 9 
+           echo "bad luck from Japan";;
+        10) echo 10 ;;
+        11) echo 11 ;;
+        12) echo 12 ;;
+        13) echo 13 ;;
+        14) echo 14 ;;
+        15) echo 15 ;;
+        16) echo 16 ;;
+        17) echo 17 
+            echo "bad luck from Italy";;
+        18) echo 18 ;;
+        19) echo 19 ;;
+        20) echo 20 ;;
+    esac
+done
