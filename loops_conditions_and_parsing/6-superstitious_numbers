@@ -20,7 +20,7 @@ do
         14) echo "14" ;;
         15) echo "15" ;;
         16) echo "16" ;;
-        17) echo "17\nbad luck from Italy";;
+        17) echo -e "17\nbad luck from Italy";;
         18) echo "18" ;;
         19) echo "19" ;;
         20) echo "20" ;;
