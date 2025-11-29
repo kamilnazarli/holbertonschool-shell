@@ -8,5 +8,6 @@ do
         echo "Hi\n"
     else
         echo "Best School\n"
+    $((i++))
     fi
 done
