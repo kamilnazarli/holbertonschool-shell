@@ -2,5 +2,5 @@
 #To display the content of ls
 for i in *
 do
-    echo "$i"
+    echo "$i" | cut -d'-' -f2
 done
