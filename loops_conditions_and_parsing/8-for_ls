@@ -2,5 +2,8 @@
 #To display the content of ls
 for i in *
 do
-    echo "$i"
+    if [[ "$i" == *-* ]]
+    then
+        echo "${file#*-}"
+    fi
 done
