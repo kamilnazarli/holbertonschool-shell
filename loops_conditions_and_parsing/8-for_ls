@@ -2,8 +2,11 @@
 #To display the content of ls
 for i in *
 do
-    if [[ "$i" == *-* ]]
+    if [ -f "$i" ]
     then
-        echo "${i#*-}"
+        if [[ "$i" == *-* ]]
+        then
+            echo "${i#*-}"
+        fi
     fi
 done
