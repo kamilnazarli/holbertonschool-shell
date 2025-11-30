@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-#To display IP code fro each line
-awk apache-access.log
+#To display the ip codes
+awk '{ print $1, $9 }' apache-access.log
+
