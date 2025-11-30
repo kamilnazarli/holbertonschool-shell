@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#To display the content of ls
 for i in *
 do
     echo "$i"
