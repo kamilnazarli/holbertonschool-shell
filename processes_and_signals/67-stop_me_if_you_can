@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#To stop terminating without kill and killall
+pkill 7-highlander
