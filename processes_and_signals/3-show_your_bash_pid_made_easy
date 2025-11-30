@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#To display PID along with the porcess name(bash)
+pgrep -l bash
+
