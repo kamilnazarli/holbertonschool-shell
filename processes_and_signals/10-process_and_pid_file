@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 #To do multiple things
-if ! touch /var/run/.permission_test 2>/dev/null
-then
-    file="/tmp/myscript.pid"
-else
-    file="/var/run/myscript.pid"
-fi
+file="/var/run/myscript.pid"
 echo $$ > "$file"
 trap 'echo "I hate the kill command"; rm -f "$file";' SIGTERM
 trap 'echo "Y U no love me?!"' SIGINT
