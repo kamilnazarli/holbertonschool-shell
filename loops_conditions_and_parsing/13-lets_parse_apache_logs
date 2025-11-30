@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#To display IP code fro each line
+awk apache-access.log
