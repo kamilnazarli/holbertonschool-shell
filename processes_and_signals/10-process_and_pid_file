@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 #To do multiple things
-file="/var/run/myscript.pid"
-if ! touch /var/run/.write_test 2>/dev/null ; then
+if ! touch /var/run/.permission_test 2>/dev/null
+then
     file="/tmp/myscript.pid"
+else
+    file="/var/run/myscript.pid"
 fi
 echo $$ > "$file"
 trap 'echo "I hate the kill command"; rm -f "$file";' SIGTERM
@@ -11,5 +13,5 @@ trap 'rm -f "$file"' SIGQUIT
 while true
 do
     echo "To infinity and beyond"
-    sleep 2
+    sleep 3
 done
