@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 #To do multiple things
-file=/var/run/myscript.pid
-echo $$ > file
-trap 'echo "I hate the kill command"; rm -f "$file";' SIGTERM
+echo $$ > /var/run/myscript.pid
+trap 'echo "I hate the kill command"; rm -f /var/run/myscript.pid;' SIGTERM
 trap 'echo "Y U no love me?!"' SIGINT
-trap 'rm -f "$file"' SIGQUIT
+trap 'rm -f /var/run/myscript.pid' SIGQUIT
 while true
 do
     echo "To infinity and beyond"
