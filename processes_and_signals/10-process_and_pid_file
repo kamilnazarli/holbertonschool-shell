@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #To do multiple things
 echo $$ > /var/run/myscript.pid
-trap 'echo "I hate the kill command"; sudo rm /var/run/myscript.pid;' SIGTERM
-trap 'echo "Y U no love me?!"' SIGINT
-trap 'sudo rm /var/run/myscript.pid' SIGQUIT
+trap "echo 'I hate the kill command'; sudo rm /var/run/myscript.pid;" SIGTERM
+trap "echo 'Y U no love me?!'" SIGINT
+trap "sudo rm /var/run/myscript.pid" SIGQUIT
 while true
 do
     echo "To infinity and beyond"
