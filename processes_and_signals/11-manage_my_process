@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#To manage other file
+/etc/init.d/tmp/my_process start
+    echo $$ > /var/run/my_process.pid
+    echo "manage_my_process started"
+/etc/init.d/my_process stop
+    rm -f /var/run/my_process.pid
+    echo "manage_my_process stopped"
+/etc/init.d/my_process restart
+    
