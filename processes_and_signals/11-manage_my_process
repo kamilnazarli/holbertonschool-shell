@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #to manage files
 PIDFILE="/var/run/my_process.pid"
 PROCESS="./manage_my_process"
