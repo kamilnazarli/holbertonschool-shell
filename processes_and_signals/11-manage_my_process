@@ -1,10 +1,28 @@
-#!/usr/bin/env bash
-#To manage other file
-/etc/init.d/tmp/my_process start
-    echo $$ > /var/run/my_process.pid
-    echo "manage_my_process started"
-/etc/init.d/my_process stop
-    rm -f /var/run/my_process.pid
-    echo "manage_my_process stopped"
-/etc/init.d/my_process restart
-    
+#!/bin/bash
+#to manage files
+PIDFILE="/var/run/my_process.pid"
+PROCESS="./manage_my_process"
+
+case "$1" in
+    start)
+        echo $$ > "/var/run/my_process.pid"
+        echo "manage_my_process started"
+    stop)
+        if [ -f "/var/run/my_process.pid" ]; then
+            kill "$(cat "/var/run/my_process.pid")" 2>/dev/null
+            rm -f "/var/run/my_process.pid"
+            echo "manage_my_process stopped"
+        else
+            echo "manage_my_process stopped"
+        fi
+    restart)
+        if [ -f "/var/run/my_process.pid" ]; then
+            kill "$(cat "/var/run/my_process.pid")" 2>/dev/null
+            rm -f "/var/run/my_process.pid"
+        fi
+        echo $$ > "/var/run/my_process.pid"
+        echo "manage_my_process restarted"
+)
+        echo "Usage: manage_my_process {start|stop|restart}"
+esac
+
