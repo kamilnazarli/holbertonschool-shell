@@ -1,2 +1,10 @@
 #!/bin/bash
-echo "$1" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+rot13() {
+    tr 'A-Za-z' 'N-ZA-Mn-za-m'
+}
+if [ -z "$1" ]; then
+    echo "Usage: $0 <file>"
+    exit 1
+fi
+cat "$1" | rot13
+
